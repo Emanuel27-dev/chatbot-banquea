@@ -11,8 +11,9 @@
 }
 
 .messages {
-    /* width: 768px; */
+
     max-width: 720px;
+    max-width: 500px;
     /* border: 1px solid white; */
 
     flex: 1;
