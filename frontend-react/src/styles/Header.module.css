@@ -1,0 +1,16 @@
+/* header */
+.header {
+    /* border: 1px solid white; */
+    padding: .8em 1em;
+    position: absolute;
+    /* right: 30px; */
+  }
+  
+    /* logo */
+  .content_logo {
+    width: 250px;
+  }
+  
+  .logo {
+    width: 100%;
+  }

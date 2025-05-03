@@ -1,0 +1,39 @@
+.article {
+    position: absolute;
+    right: 30px;
+    top: 0;
+
+    border-radius: 2em;
+    border: 1px solid var(--grey-color);
+    width: 350px;
+    height: 730px;
+    margin: 1em;
+    overflow-y: scroll;
+}
+
+.header {
+    border-radius: inherit;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom-right-radius: initial;
+    border-bottom-left-radius: initial;
+    background-color: black;
+}
+
+.headerTitle {
+    width: 100%;
+}
+
+.containerTitles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: .7em 1em;
+    
+}
+
+.title {
+    background-color: var(--grey-color);
+    border-radius: 1.5em;
+    padding: .5em 1em;
+}
