@@ -1838,3 +1838,121 @@
 2025-05-03 15:28:04,609 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
 2025-05-03 15:28:08,092 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-03 15:28:08,109 [INFO] 127.0.0.1 - - [03/May/2025 15:28:08] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:35:28,121 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 17:37:40,860 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 17:38:55,435 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 17:39:08,539 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 17:39:08,539 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 17:39:08,543 [INFO]  * Restarting with stat
+2025-05-03 17:39:13,335 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 17:39:23,723 [WARNING]  * Debugger is active!
+2025-05-03 17:39:23,733 [INFO]  * Debugger PIN: 483-926-460
+2025-05-03 17:40:39,938 [INFO] 127.0.0.1 - - [03/May/2025 17:40:39] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:40:40,188 [INFO] 127.0.0.1 - - [03/May/2025 17:40:40] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:40:52,874 [INFO] 127.0.0.1 - - [03/May/2025 17:40:52] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:40:52,879 [INFO] 127.0.0.1 - - [03/May/2025 17:40:52] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:41:45,981 [INFO] 127.0.0.1 - - [03/May/2025 17:41:45] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:41:47,417 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:41:48,162 [INFO] Loading faiss with AVX2 support.
+2025-05-03 17:41:51,793 [INFO] Successfully loaded faiss with AVX2 support.
+2025-05-03 17:41:51,820 [INFO] Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-03 17:41:54,907 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:41:55,804 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:41:56,480 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:41:56,825 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:41:58,244 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:41:58,247 [INFO] 127.0.0.1 - - [03/May/2025 17:41:58] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:42:12,107 [INFO] 127.0.0.1 - - [03/May/2025 17:42:12] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:42:13,315 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:42:13,998 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:42:15,060 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:42:15,868 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:42:16,534 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:42:16,870 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:42:18,386 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:42:18,392 [INFO] 127.0.0.1 - - [03/May/2025 17:42:18] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:43:17,110 [INFO] 127.0.0.1 - - [03/May/2025 17:43:17] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:17,121 [INFO] 127.0.0.1 - - [03/May/2025 17:43:17] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:17,122 [INFO] 127.0.0.1 - - [03/May/2025 17:43:17] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:17,165 [INFO] 127.0.0.1 - - [03/May/2025 17:43:17] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:19,092 [INFO] 127.0.0.1 - - [03/May/2025 17:43:19] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:19,094 [INFO] 127.0.0.1 - - [03/May/2025 17:43:19] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:19,104 [INFO] 127.0.0.1 - - [03/May/2025 17:43:19] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:19,108 [INFO] 127.0.0.1 - - [03/May/2025 17:43:19] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:25,053 [INFO] 127.0.0.1 - - [03/May/2025 17:43:25] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:25,062 [INFO] 127.0.0.1 - - [03/May/2025 17:43:25] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:25,063 [INFO] 127.0.0.1 - - [03/May/2025 17:43:25] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:25,072 [INFO] 127.0.0.1 - - [03/May/2025 17:43:25] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:35,068 [INFO] 127.0.0.1 - - [03/May/2025 17:43:35] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:35,077 [INFO] 127.0.0.1 - - [03/May/2025 17:43:35] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:35,106 [INFO] 127.0.0.1 - - [03/May/2025 17:43:35] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:43:35,118 [INFO] 127.0.0.1 - - [03/May/2025 17:43:35] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:44:30,473 [INFO] 127.0.0.1 - - [03/May/2025 17:44:30] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:44:31,473 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:44:31,961 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:44:32,622 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:44:32,970 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:44:33,807 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:44:34,088 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:44:36,050 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:44:36,063 [INFO] 127.0.0.1 - - [03/May/2025 17:44:36] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:45:00,843 [INFO] 127.0.0.1 - - [03/May/2025 17:45:00] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:45:01,982 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:45:02,476 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:45:03,425 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:04,062 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:04,824 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:05,582 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:06,841 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:45:06,844 [INFO] 127.0.0.1 - - [03/May/2025 17:45:06] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:45:46,019 [INFO] 127.0.0.1 - - [03/May/2025 17:45:46] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:45:47,104 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:45:47,623 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:45:47,994 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:48,372 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:48,654 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:48,982 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:45:53,899 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:45:53,902 [INFO] 127.0.0.1 - - [03/May/2025 17:45:53] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:46:13,732 [INFO] 127.0.0.1 - - [03/May/2025 17:46:13] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:46:14,579 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:46:15,692 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:46:17,757 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:46:18,305 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:46:18,601 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:46:18,838 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 17:46:22,536 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 17:46:22,539 [INFO] 127.0.0.1 - - [03/May/2025 17:46:22] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 17:47:09,095 [INFO] 127.0.0.1 - - [03/May/2025 17:47:09] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:47:09,105 [INFO] 127.0.0.1 - - [03/May/2025 17:47:09] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:52:43,127 [INFO] 127.0.0.1 - - [03/May/2025 17:52:43] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:52:43,138 [INFO] 127.0.0.1 - - [03/May/2025 17:52:43] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:55:23,250 [INFO] 127.0.0.1 - - [03/May/2025 17:55:23] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:55:23,259 [INFO] 127.0.0.1 - - [03/May/2025 17:55:23] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:56:03,897 [INFO] 127.0.0.1 - - [03/May/2025 17:56:03] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:56:03,904 [INFO] 127.0.0.1 - - [03/May/2025 17:56:03] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:57:30,838 [INFO] 127.0.0.1 - - [03/May/2025 17:57:30] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:57:30,846 [INFO] 127.0.0.1 - - [03/May/2025 17:57:30] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:58:02,109 [INFO] 127.0.0.1 - - [03/May/2025 17:58:02] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:58:02,119 [INFO] 127.0.0.1 - - [03/May/2025 17:58:02] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:59:02,903 [INFO] 127.0.0.1 - - [03/May/2025 17:59:02] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:59:02,942 [INFO] 127.0.0.1 - - [03/May/2025 17:59:02] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:59:43,673 [INFO] 127.0.0.1 - - [03/May/2025 17:59:43] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 17:59:43,685 [INFO] 127.0.0.1 - - [03/May/2025 17:59:43] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:00:14,141 [INFO] 127.0.0.1 - - [03/May/2025 18:00:14] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:00:14,153 [INFO] 127.0.0.1 - - [03/May/2025 18:00:14] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:00:30,140 [INFO] 127.0.0.1 - - [03/May/2025 18:00:30] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:00:30,149 [INFO] 127.0.0.1 - - [03/May/2025 18:00:30] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:02:21,265 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 18:02:32,024 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 18:02:32,024 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 18:02:32,027 [INFO]  * Restarting with stat
+2025-05-03 18:02:36,451 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 18:02:46,857 [WARNING]  * Debugger is active!
+2025-05-03 18:02:46,866 [INFO]  * Debugger PIN: 483-926-460
+2025-05-03 18:03:06,484 [INFO] 127.0.0.1 - - [03/May/2025 18:03:06] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:03:06,492 [INFO] 127.0.0.1 - - [03/May/2025 18:03:06] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:23:14,520 [INFO] 127.0.0.1 - - [03/May/2025 18:23:14] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:23:14,540 [INFO] 127.0.0.1 - - [03/May/2025 18:23:14] "GET /titulos/serums HTTP/1.1" 200 -
