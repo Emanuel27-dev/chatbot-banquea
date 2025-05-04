@@ -1838,3 +1838,120 @@
 2025-05-03 15:28:04,609 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
 2025-05-03 15:28:08,092 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-03 15:28:08,109 [INFO] 127.0.0.1 - - [03/May/2025 15:28:08] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:17:41,808 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 16:17:53,837 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 16:17:53,838 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 16:17:53,846 [INFO]  * Restarting with stat
+2025-05-03 16:17:59,861 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 16:18:08,461 [WARNING]  * Debugger is active!
+2025-05-03 16:18:08,494 [INFO]  * Debugger PIN: 911-467-436
+2025-05-03 16:18:44,192 [INFO] 127.0.0.1 - - [03/May/2025 16:18:44] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 16:18:44,208 [INFO] 127.0.0.1 - - [03/May/2025 16:18:44] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 16:22:50,070 [INFO] 127.0.0.1 - - [03/May/2025 16:22:50] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:22:50,322 [INFO] 127.0.0.1 - - [03/May/2025 16:22:50] "[31m[1mPOST /chat/serums HTTP/1.1[0m" 400 -
+2025-05-03 16:23:31,015 [INFO] 127.0.0.1 - - [03/May/2025 16:23:31] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:23:33,299 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:23:33,898 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:23:33,942 [INFO] Loading faiss with AVX2 support.
+2025-05-03 16:23:34,220 [INFO] Successfully loaded faiss with AVX2 support.
+2025-05-03 16:23:34,252 [INFO] Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-03 16:23:37,971 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:23:39,677 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:23:39,999 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:23:40,700 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:23:46,596 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:23:46,599 [INFO] 127.0.0.1 - - [03/May/2025 16:23:46] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:25:57,659 [INFO] 127.0.0.1 - - [03/May/2025 16:25:57] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:25:58,892 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:25:59,526 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:25:59,918 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:26:00,613 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:26:01,075 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:26:01,327 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:26:07,018 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:26:07,024 [INFO] 127.0.0.1 - - [03/May/2025 16:26:07] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:27:06,517 [INFO] 127.0.0.1 - - [03/May/2025 16:27:06] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:27:08,240 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:27:08,818 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:27:09,819 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:10,040 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:10,404 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:10,663 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:15,745 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:27:15,749 [INFO] 127.0.0.1 - - [03/May/2025 16:27:15] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:27:46,895 [INFO] 127.0.0.1 - - [03/May/2025 16:27:46] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:27:47,790 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:27:48,643 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:27:52,390 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:53,054 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:54,013 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:54,896 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:27:58,524 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:27:58,527 [INFO] 127.0.0.1 - - [03/May/2025 16:27:58] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:32:35,481 [INFO] 127.0.0.1 - - [03/May/2025 16:32:35] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:32:36,532 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:32:38,190 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:38,984 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:39,545 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:39,829 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:41,775 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:32:41,784 [INFO] 127.0.0.1 - - [03/May/2025 16:32:41] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:32:47,266 [INFO] 127.0.0.1 - - [03/May/2025 16:32:47] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 16:32:48,264 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:32:48,818 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:32:49,422 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:50,186 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:50,826 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:51,141 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 16:32:53,049 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 16:32:53,052 [INFO] 127.0.0.1 - - [03/May/2025 16:32:53] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 18:07:59,334 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 18:08:05,643 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 18:08:05,644 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-03 18:08:05,653 [INFO]  * Restarting with stat
+2025-05-03 18:08:09,322 [INFO] ✅ Se cargaron 5 palabras sensibles desde 'palabras_sensibles.txt'.
+2025-05-03 18:08:16,889 [WARNING]  * Debugger is active!
+2025-05-03 18:08:16,900 [INFO]  * Debugger PIN: 911-467-436
+2025-05-03 18:08:16,931 [INFO] 127.0.0.1 - - [03/May/2025 18:08:16] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:08:16,935 [INFO] 127.0.0.1 - - [03/May/2025 18:08:16] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:08:16,944 [INFO] 127.0.0.1 - - [03/May/2025 18:08:16] "GET /titulos/serums HTTP/1.1" 200 -
+2025-05-03 18:08:24,536 [INFO] 127.0.0.1 - - [03/May/2025 18:08:24] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 18:08:26,065 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 18:08:26,758 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 18:08:26,781 [INFO] Loading faiss with AVX2 support.
+2025-05-03 18:08:26,932 [INFO] Successfully loaded faiss with AVX2 support.
+2025-05-03 18:08:26,943 [INFO] Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-05-03 18:08:28,492 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:29,495 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:30,178 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:30,468 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:31,714 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 18:08:31,717 [INFO] 127.0.0.1 - - [03/May/2025 18:08:31] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 18:08:47,625 [INFO] 127.0.0.1 - - [03/May/2025 18:08:47] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 18:08:48,348 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 18:08:48,938 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 18:08:49,314 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:49,885 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:50,311 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:50,678 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 18:08:54,978 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 18:08:54,981 [INFO] 127.0.0.1 - - [03/May/2025 18:08:54] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 19:02:36,682 [INFO] 127.0.0.1 - - [03/May/2025 19:02:36] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 19:02:38,059 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 19:02:39,520 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 19:02:40,294 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:41,246 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:42,056 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:42,591 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:45,356 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 19:02:45,361 [INFO] 127.0.0.1 - - [03/May/2025 19:02:45] "POST /chat/serums HTTP/1.1" 200 -
+2025-05-03 19:02:53,894 [INFO] 127.0.0.1 - - [03/May/2025 19:02:53] "OPTIONS /chat/serums HTTP/1.1" 200 -
+2025-05-03 19:02:54,649 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 19:02:55,294 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:56,316 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:57,228 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:57,518 [INFO] HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-05-03 19:02:59,180 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-03 19:02:59,184 [INFO] 127.0.0.1 - - [03/May/2025 19:02:59] "POST /chat/serums HTTP/1.1" 200 -
