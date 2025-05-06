@@ -17,7 +17,7 @@ export const Titles = () => {
   return (
     <article className={style.article}>
       <header className={style.header}>
-        <h1 className={style.headerTitle}>GIT DEFINITIVAMENTE ES HORRIBLE 👽👽</h1>
+        <h1 className={style.headerTitle}>titulos</h1>
       </header>
       <div className={style.containerTitles}>
         {titles.map((title) => (
