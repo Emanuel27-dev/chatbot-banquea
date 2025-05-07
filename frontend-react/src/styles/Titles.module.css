@@ -27,6 +27,7 @@
 .containerTitles {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 15px;
     padding: .7em 1em;
     
