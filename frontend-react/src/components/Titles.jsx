@@ -20,8 +20,10 @@ export const Titles = () => {
         <h1 className={style.headerTitle}>titulos</h1>
       </header>
       <div className={style.containerTitles}>
-        {titles.map((title) => (
-          <div className={style.title}>{title}</div>
+        {titles.map(({ nombre, link,index }) => (
+          // <div className={style.title}>
+            <a href={link} target="_blank" className={style.title}>{nombre}</a>
+          // </div>
         ))}
       </div>
     </article>

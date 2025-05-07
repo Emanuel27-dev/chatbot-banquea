@@ -1,18 +1,16 @@
-import { BodyChat } from './components/BodyChat'
-import { Header } from './components/Header'
+import { ChatLayout } from './components/ChatLayout'
 import { PinView } from './components/PinView'
-import { Titles } from './components/Titles'
+import { Routes, Route } from 'react-router'
+
 
 
 function App() {
   
   return (
-    <>
-      {/* <Header />
-      <BodyChat />
-      <Titles /> */}
-      <PinView />
-    </>
+    <Routes>
+      <Route path="/" element={<PinView />} />
+      <Route path="/chat" element={<ChatLayout />} />
+    </Routes>
   )
 }
 

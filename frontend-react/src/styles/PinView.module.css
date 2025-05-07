@@ -27,7 +27,7 @@
 .input {
     width: 300px;
     padding: .5em .8em;
-    font-size: 1em;
+    font-size: 1.1em;
     border-radius: .5em;
 
     outline: none;
@@ -38,6 +38,7 @@
 .text {
     /* border: 1px solid white; */
     text-align: center;
+    font-size: 1.1em;
 }
 
 .textIcorrect {
@@ -46,7 +47,7 @@
 
 .button {
     padding: .5em 1em;
-    font-size: 1em;
+    font-size: 1.1em;
     border-radius: .5em;
     border: none;
     cursor: pointer;

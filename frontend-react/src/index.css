@@ -4,6 +4,7 @@
   color: rgba(255, 255, 255, 0.87);
 
   --green-color: #15DB95;
+  /* --green-color: rgb(1,28,39); */
   --grey-color: #323232;
 }
 
@@ -14,12 +15,12 @@
 }
 
 #root {
-  /* background-color: red; */
   height: 100%;
 }
 
 body, html {
   overflow: hidden;
+  height: 100%; /* magia !! importante para que el contenido del chay la caja quepan y no desborden */
 }
 
 

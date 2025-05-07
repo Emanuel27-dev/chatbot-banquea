@@ -1,30 +1,32 @@
 import { useState } from "react";
 import style from "../styles/PinView.module.css";
 import { GiPadlock } from "react-icons/gi";
+import { useNavigate } from "react-router";
 
 export const PinView = () => {
-
   const [inputValue, setInputValue] = useState("");
-  const [isCorrect, setIsCorrect] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(true);
+  const navigate = useNavigate();
 
   const handleInputValue = ({ target }) => {
     setInputValue(target.value);
   };
 
-  const handleButton = () => {
-    if (inputValue === '12345') {
-        console.log('PIN CORRECTO')
-        setIsCorrect(true);
-    }
-    else {
-        setIsCorrect(false);
-        console.log('PIN INCORRECTO')
-    }
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    if (inputValue === "12345") {
+      navigate("/chat");
+    } else {
+      setIsCorrect(false);
+    }
+  };
 
   return (
-    <section className={style.section}>
+    <form 
+        className={style.section}
+        onSubmit={handleSubmit}    
+    >
       <div className={style.container}>
         <figure className={style.containerIcon}>
           <GiPadlock />
@@ -38,12 +40,15 @@ export const PinView = () => {
           />
         </div>
         {/* <div className={style.text}>Ingresar PIN</div> */}
-        { (isCorrect) ? (<div className={style.text}>Ingresó el PIN correcto</div>) : (<div className={`${style.text} ${style.textIcorrect}`}>Ingresó el pin incorrecto</div>)}
-        <button 
-            className={style.button}
-            onClick={handleButton}   
-        >Ingresar</button>
+        {isCorrect ? (
+          <div className={style.text}>Ingresar PIN</div>
+        ) : (
+          <div className={`${style.text} ${style.textIcorrect}`}>
+            Ingresó el PIN incorrecto
+          </div>
+        )}
+        <button className={style.button}>Ingresar</button>
       </div>
-    </section>
+    </form>
   );
 };

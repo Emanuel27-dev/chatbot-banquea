@@ -233,18 +233,37 @@ def chat_especialidad(especialidad):
         return jsonify({"error": str(e)}), 500
 
 # 📄 Endpoint para devolver títulos de documentos
+# @app.route("/titulos/<especialidad>", methods=["GET"])
+# def obtener_titulos(especialidad):
+#     ruta_txt = os.path.join("data", especialidad, "titulos.txt")
+#     if not os.path.exists(ruta_txt):
+#         return jsonify({"error": f"No se encontró el archivo de títulos para '{especialidad}'."}), 404
+
+#     with open(ruta_txt, "r", encoding="utf-8") as f:
+#         titulos = [line.strip() for line in f.readlines() if line.strip()]
+
+#     return jsonify({"especialidad": especialidad, "titulos": titulos})
+
 @app.route("/titulos/<especialidad>", methods=["GET"])
 def obtener_titulos(especialidad):
-    ruta_txt = os.path.join("data", especialidad, "titulos.txt")
-    if not os.path.exists(ruta_txt):
+    ruta_json = os.path.join("data", especialidad, "titulos.json")
+    if not os.path.exists(ruta_json):
         return jsonify({"error": f"No se encontró el archivo de títulos para '{especialidad}'."}), 404
 
-    with open(ruta_txt, "r", encoding="utf-8") as f:
-        titulos = [line.strip() for line in f.readlines() if line.strip()]
+    try:
+        with open(ruta_json, "r", encoding="utf-8") as f:
+            titulos = json.load(f)
 
-    return jsonify({"especialidad": especialidad, "titulos": titulos})
+        # Validar formato
+        if not isinstance(titulos, list) or not all("nombre" in doc and "link" in doc for doc in titulos):
+            return jsonify({"error": "Formato inválido en titulos.json"}), 500
+
+        return jsonify({"especialidad": especialidad, "titulos": titulos})
+    except Exception as e:
+        logging.error(f"❌ Error al leer titulos.json para {especialidad}: {str(e)}")
+        return jsonify({"error": "No se pudo leer los títulos"}), 500
 
 if __name__ == "__main__":
     correccion_cache = cargar_cache()
     print(f"🔵 Cache de correcciones cargada ({len(correccion_cache)} entradas).")
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000,debug=True)

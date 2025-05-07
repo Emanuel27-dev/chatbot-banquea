@@ -4,7 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { Loader } from "./Loader";
 
 import { ImBook } from "react-icons/im";
-import { AiFillLike, AiOutlineLike ,AiFillDislike, AiOutlineDislike } from "react-icons/ai";
+import {
+  AiFillLike,
+  AiOutlineLike,
+  AiFillDislike,
+  AiOutlineDislike,
+} from "react-icons/ai";
 
 export const BodyChat = () => {
   const [messages, setMessages] = useState([]);
@@ -27,7 +32,7 @@ export const BodyChat = () => {
     setLoading(true);
 
     // Llamando a la API
-    const response = await fetch("http://localhost:5000/chat/serums", {
+    const response = await fetch("http://192.168.18.8:5000/chat/serums", {
       method: "POST",
       headers: {
         "Content-Type": `application/json`,
@@ -46,40 +51,41 @@ export const BodyChat = () => {
 
   return (
     <section className={style.container}>
-      <div className={style.messages}>
-        {messages.map(({ sender, text }, index) =>
-          sender === "user" ? (
-            <div key={index} className={style.messageRowUser}>
-              <div className={`${style.message} ${style.messageUser}`}>
-                {text}
-              </div>
-            </div>
-          ) : (
-            <div className={style.messageRowBot}>
-              <div className={style.avatar}>
-                <ImBook />
-              </div>
-              <div className={`${style.message} ${style.bot}`}>
-                <p>{text}</p>
-                {/* ICONOS LIKE, DISLIKE */}
-                <div className={style.icons}>
-                    <div>
-                        <AiOutlineLike />
-                    </div>
-                    <div>
-                        <AiOutlineDislike />
-                    </div>
+      <div className={style.containerTwo}>
+        <div className={style.messages}>
+          {messages.map(({ sender, text }, index) =>
+            sender === "user" ? (
+              <div key={index} className={style.messageRowUser}>
+                <div className={`${style.message} ${style.messageUser}`}>
+                  {text}
                 </div>
-
               </div>
-            </div>
-          )
-        )}
-        {loading && <Loader />}
-        <div ref={bottomRef} /> {/* marcador invisible */}
-      </div>
+            ) : (
+              <div className={style.messageRowBot}>
+                <div className={style.avatar}>
+                  <ImBook />
+                </div>
+                <div className={`${style.message} ${style.bot}`}>
+                  <p>{text}</p>
+                  {/* ICONOS LIKE, DISLIKE */}
+                  <div className={style.icons}>
+                    <div>
+                      <AiOutlineLike />
+                    </div>
+                    <div>
+                      <AiOutlineDislike />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          )}
+          {loading && <Loader />}
+          <div ref={bottomRef} /> {/* marcador invisible */}
+        </div>
 
-      <BoxTextAI handleSend={handleSend} />
+        <BoxTextAI handleSend={handleSend} />
+      </div>
     </section>
   );
 };
