@@ -1,12 +1,13 @@
 .article {
-    position: absolute;
+    /* position: absolute;
     right: 30px;
-    top: 0;
+    top: 0; */
 
     border-radius: 2em;
     border: 1px solid var(--grey-color);
     width: 350px;
     height: 480px;
+    position: fixed;
     margin: 1em;
     overflow-y: auto;
 }
@@ -30,7 +31,7 @@
     justify-content: center;
     gap: 15px;
     padding: .7em 1em;
-    
+ 
 }
 
 .title {
