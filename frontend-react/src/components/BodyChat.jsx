@@ -12,7 +12,6 @@ import {
   AiOutlineDislike,
 } from "react-icons/ai";
 import { AiOutlineDoubleRight,AiOutlineDoubleLeft,AiOutlineMenu } from "react-icons/ai";
-import { Titles } from "./Titles";
 import { Sidebar } from "./Sidebar";
 
 export const BodyChat = () => {
@@ -50,7 +49,7 @@ export const BodyChat = () => {
     // agregar la respuesta del bot al arreglo messages
     const newBotMessage = { sender: "bot", text: respuesta };
     setMessages((prev) => [...prev, newBotMessage]);
-    console.log(messages);
+    // console.log(messages);
     setLoading(false);
   };
 
@@ -61,7 +60,6 @@ export const BodyChat = () => {
 
   return (
     <main className={style.main}>
-      {/* <Titles /> */}
       <Sidebar isHidden={isHidden}/>
 
       <div className={style.sidechat}>
@@ -92,7 +90,7 @@ export const BodyChat = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className={style.messageRow}>
+                  <div className={style.messageRow} key={index}>
                     <div className={style.avatar}>
                       <ImBook />
                     </div>

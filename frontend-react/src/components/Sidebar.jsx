@@ -33,8 +33,8 @@ export const Sidebar = ({ isHidden }) => {
             {loaderTitles ? (
               <div className="loaderTitles"></div>
             ) : (
-              titles.map(({ nombre, link, index }) => (
-                <a href={link} target="_blank" className={style.title}>
+              titles.map(({ nombre, link }, index) => (
+                <a href={link} target="_blank" className={style.title} key={index}>
                   {nombre}
                 </a>
               ))
