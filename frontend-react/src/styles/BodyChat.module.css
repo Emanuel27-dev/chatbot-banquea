@@ -1,12 +1,15 @@
 .main {
   display: flex;
   background-color: rgb(54, 53, 53);
-  height: 100vh;
+  height: 100dvh;
+  width: 100%;
   overflow: hidden;
+
+  position: relative;
 }
 
 .sidechat {
-  flex: 4;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -16,6 +19,9 @@
   background-color: #040B15;
   flex: 1;
   padding: .5em .8em;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
 }
 
 .logoContainer {
@@ -30,6 +36,19 @@
   object-fit: cover;
 }
 
+.iconContainer {
+  width: 33px;
+  height: 33px;
+  border: 1px solid var(--letra-color);
+  border-radius: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--grey-color);
+}
+
+
 
 .chatContainer {
   /* background-color: saddlebrown; */
@@ -38,6 +57,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /* border: 1px solid blue; */
 }
 
 .chatMessagesContainer {
@@ -46,6 +66,7 @@
   overflow-y: scroll;
   padding: 0.5em;
   flex: 1;
+  /* border: 1px solid white; */
 }
 
 .chatMessages {
@@ -137,6 +158,15 @@
     width: 80%;
   }
 }
+
+@media (width <= 500px) {
+  
+  .chatMessages {
+    width: 100%;
+  }
+  
+}
+
 
 
 

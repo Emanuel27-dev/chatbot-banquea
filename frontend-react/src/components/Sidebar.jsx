@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import style from "../styles/Sidebar.module.css";
-import { AiOutlineDoubleLeft } from "react-icons/ai";
 
-export const Sidebar = () => {
+export const Sidebar = ({ isHidden }) => {
   const [titles, setTitles] = useState([]);
   const [loaderTitles, setLoaderTitles] = useState(true);
 
   const getTitles = async () => {
     // http://127.0.0.1:5000/titulos/serums
-    const response = await fetch("http://127.0.0.1:5000/titulos/serums");
+    const response = await fetch(
+      "https://1mf6c2b1-5000.brs.devtunnels.ms/titulos/serums"
+    );
     const { titulos } = await response.json();
     setTitles([...titulos]);
     setLoaderTitles(false);
@@ -19,17 +20,13 @@ export const Sidebar = () => {
   }, []);
 
   return (
-    <section className={style.sidebar}>
-      <header className={style.headerSidebar}>
-        <div className={style.iconContainer}>
-          <AiOutlineDoubleLeft />
-        </div>
-      </header>
-
+    <section
+      className={`${style.sidebar} ${isHidden ? style.sidebarHidden : ""}`}
+    >
       <article className={style.article}>
         <div className={style.container}>
           <header className={style.header}>
-            <h1 className={style.headerTitle}>DOCUMENTOS</h1>
+            <h1 className={style.headerTitle}>Documentos</h1>
           </header>
 
           <div className={style.containerTitles}>

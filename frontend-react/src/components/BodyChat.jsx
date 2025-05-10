@@ -2,6 +2,7 @@ import { BoxTextAI } from "./BoxTextAI";
 import style from "../styles/BodyChat.module.css";
 import { useEffect, useRef, useState } from "react";
 import { Loader } from "./Loader";
+import logo from "../assets/banqueaIcon.png";
 
 import { ImBook } from "react-icons/im";
 import {
@@ -10,12 +11,14 @@ import {
   AiFillDislike,
   AiOutlineDislike,
 } from "react-icons/ai";
+import { AiOutlineDoubleRight,AiOutlineDoubleLeft,AiOutlineMenu } from "react-icons/ai";
 import { Titles } from "./Titles";
 import { Sidebar } from "./Sidebar";
 
 export const BodyChat = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   const bottomRef = useRef(null);
 
@@ -34,7 +37,7 @@ export const BodyChat = () => {
     setLoading(true);
 
     // Llamando a la API http://192.168.18.8:5000
-    const response = await fetch("http://192.168.18.8:5000/chat/serums", {
+    const response = await fetch("https://1mf6c2b1-5000.brs.devtunnels.ms/chat/serums", {
       method: "POST",
       headers: {
         "Content-Type": `application/json`,
@@ -51,20 +54,24 @@ export const BodyChat = () => {
     setLoading(false);
   };
 
+  const handleSidebar = () => {
+    setIsHidden(!isHidden);
+  }
+
+
   return (
     <main className={style.main}>
       {/* <Titles /> */}
-      <Sidebar />
+      <Sidebar isHidden={isHidden}/>
 
       <div className={style.sidechat}>
         {/* Componente para header de chat */}
         <header className={style.headerChat}>
+          <div className={style.iconContainer} onClick={handleSidebar}>
+            <AiOutlineMenu />
+          </div>
           <figure className={style.logoContainer}>
-            <img
-              src="./../../public/banqueaIcon.png"
-              alt="logoBanquea"
-              className={style.logoBanquea}
-            />
+            <img src={logo} alt="logoBanquea" className={style.logoBanquea} />
           </figure>
         </header>
 
@@ -105,12 +112,11 @@ export const BodyChat = () => {
                 )
               )}
               {loading && <Loader />}
-              <div ref={bottomRef} /> 
+              <div ref={bottomRef} />
             </div>
           </div>
-          <BoxTextAI handleSend={handleSend} />
+          <BoxTextAI handleSend={handleSend} isLoadingAnswer={loading} />
         </div>
-
       </div>
     </main>
   );
