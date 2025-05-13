@@ -83,10 +83,8 @@
 
 .messageRow {
   display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  /* width: 600px; */
-  /* justify-content: flex-end; */
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .messageRow.user {
@@ -95,7 +93,7 @@
 }
 
 .message {
-  max-width: 80%;
+  /* max-width: 80%; */
   padding: 0.75rem 1rem;
   border-radius: 1rem;
   font-size: 0.95rem;
@@ -110,6 +108,7 @@
 }
 
 .message.user {
+  max-width: 75%;
   background-color: var(--green-color);
   color: #000000;
   color: var(--header-color);
@@ -153,6 +152,33 @@
   line-height: 1.8;
 }
 
+/* estilos de bienvenida */
+.contMessageWelcome {
+  text-align: center;
+  margin-top: 10em;
+
+  opacity: 0;
+  filter: blur(4px);
+  animation: aparecer 2s ease-out forwards;
+  animation-delay: .5s; /* espera 2 segundos antes de comenzar */
+}
+
+.messageWelcome {
+  font-size: 28px;
+}
+
+/* Animacion para la respuesta */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 @media (width <= 985px) {
   .chatMessages {
     width: 80%;
@@ -164,7 +190,16 @@
   .chatMessages {
     width: 100%;
   }
-  
+
+  .messageWelcome {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .messageRow {
+    gap: initial;
+  }
+
 }
 
 

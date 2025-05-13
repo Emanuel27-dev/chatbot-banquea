@@ -1,5 +1,7 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
 
   /* --green-color: #15DB95; */
   --green-color: #34c3ae;
@@ -9,6 +11,12 @@
   --scroll-color: #7c7979;
   --grey-color: #323232;
   --letra-color: #F5F5F5;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
 * {

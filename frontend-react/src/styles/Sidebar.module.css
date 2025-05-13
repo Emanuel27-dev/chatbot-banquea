@@ -10,6 +10,7 @@
 
   position: absolute;
   top: 70px;
+  z-index: 10;
 
 }
 
@@ -52,10 +53,6 @@
 }
 
 
-
-
-
-
 .sidebarHidden {
     width: 0;
 }
@@ -93,5 +90,11 @@
     .sidebar {
         border-top-right-radius: .8em;
         border-bottom-right-radius: .8em;
+    }
+}
+
+@media (width <= 1455px) {
+    .sidebar {
+        
     }
 }

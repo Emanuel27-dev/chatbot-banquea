@@ -11,13 +11,17 @@ import {
   AiFillDislike,
   AiOutlineDislike,
 } from "react-icons/ai";
-import { AiOutlineDoubleRight,AiOutlineDoubleLeft,AiOutlineMenu } from "react-icons/ai";
+import {
+  AiOutlineDoubleRight,
+  AiOutlineDoubleLeft,
+  AiOutlineMenu,
+} from "react-icons/ai";
 import { Sidebar } from "./Sidebar";
 
 export const BodyChat = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
   const bottomRef = useRef(null);
 
@@ -36,13 +40,16 @@ export const BodyChat = () => {
     setLoading(true);
 
     // Llamando a la API http://192.168.18.8:5000
-    const response = await fetch("https://1mf6c2b1-5000.brs.devtunnels.ms/chat/serums", {
-      method: "POST",
-      headers: {
-        "Content-Type": `application/json`,
-      },
-      body: JSON.stringify({ question: inputValue }),
-    });
+    const response = await fetch(
+      "https://1mf6c2b1-5000.brs.devtunnels.ms/chat/serums",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": `application/json`,
+        },
+        body: JSON.stringify({ question: inputValue }),
+      }
+    );
 
     const { respuesta } = await response.json();
 
@@ -55,12 +62,11 @@ export const BodyChat = () => {
 
   const handleSidebar = () => {
     setIsHidden(!isHidden);
-  }
-
+  };
 
   return (
     <main className={style.main}>
-      <Sidebar isHidden={isHidden}/>
+      <Sidebar isHidden={isHidden} />
 
       <div className={style.sidechat}>
         {/* Componente para header de chat */}
@@ -74,43 +80,52 @@ export const BodyChat = () => {
         </header>
 
         <div className={style.chatContainer}>
-          {/* <div className={style.contMessageWelcome}>
-            <h1 className={style.messageWelcome}>Bienvenido al chat serums</h1>
-          </div> */}
           <div className={style.chatMessagesContainer}>
             <div className={style.chatMessages}>
-              {messages.map(({ sender, text }, index) =>
-                sender === "user" ? (
-                  <div
-                    key={index}
-                    className={`${style.messageRow} ${style.user}`}
-                  >
-                    <div className={`${style.message} ${style.user}`}>
-                      {text}
-                    </div>
-                  </div>
-                ) : (
-                  <div className={style.messageRow} key={index}>
-                    <div className={style.avatar}>
-                      <ImBook />
-                    </div>
-                    <div className={`${style.message} ${style.bot}`}>
-                      <p>{text}</p>
-                      {/* ICONOS LIKE, DISLIKE */}
-                      <div className={style.icons}>
-                        <div>
-                          <AiOutlineLike />
-                        </div>
-                        <div>
-                          <AiOutlineDislike />
+              {/* Si el arreglo esta vacion mostramos el mensaje de bienvenida, caso contrario se inicia la conversacion */}
+
+              {messages.length === 0 ? (
+                <div className={style.contMessageWelcome}>
+                  <p className={style.messageWelcome}>
+                    Bienvenido al chat de serums, ¿en qué te puedo ayudar?
+                  </p>
+                </div>
+              ) : (
+                <>
+                  {messages.map(({ sender, text }, index) =>
+                    sender === "user" ? (
+                      <div
+                        key={index}
+                        className={`${style.messageRow} ${style.user}`}
+                      >
+                        <div className={`${style.message} ${style.user}`}>
+                          {text}
                         </div>
                       </div>
-                    </div>
-                  </div>
-                )
+                    ) : (
+                      <div className={style.messageRow} key={index}>
+                        <div className={style.avatar}>
+                          <ImBook />
+                        </div>
+
+                        <div className={`${style.message} ${style.bot}`}>
+                          <p className={style.messageTextBot}>{text}</p>
+                          <div className={style.icons}>
+                            <div>
+                              <AiOutlineLike />
+                            </div>
+                            <div>
+                              <AiOutlineDislike />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  )}
+                  {loading && <Loader />}
+                  <div ref={bottomRef} />
+                </>
               )}
-              {loading && <Loader />}
-              <div ref={bottomRef} />
             </div>
           </div>
           <BoxTextAI handleSend={handleSend} isLoadingAnswer={loading} />
