@@ -94,6 +94,7 @@ Reglas importantes:
 - No inventes datos si el contexto no los contiene.
 - Si te preguntan por títulos de documentos (como guías de práctica clínicas, decretos supremos o resoluciones), extrae los nombres exactamente como aparecen en el contexto, sin modificar ni resumir.
 - Si no encuentras suficiente información en el contexto, respóndelo con honestidad ("No se encontró información suficiente...").
+- Si el documento tiene año, número o fecha, también menciónalo.
 - Si el usuario te envía mensajes con palabras sensibles relacionadas al suicidio, responde: "Si estás atravesando un momento difícil, es muy importante que hables con alguien de confianza o busques apoyo profesional. No estás solo/a. Comunícate con una línea de ayuda en tu país o acude a un profesional de salud mental."
 
 Formato esperado de respuesta:
@@ -272,6 +273,30 @@ def obtener_titulos(especialidad):
     except Exception as e:
         logging.error(f"❌ Error al leer titulos.json para {especialidad}: {str(e)}")
         return jsonify({"error": "No se pudo leer los títulos"}), 500
+    
+@app.route("/feedback", methods=["POST"])
+def recibir_feedback():
+    data = request.get_json()
+    especialidad = data.get("especialidad")
+    pregunta = data.get("pregunta")
+    respuesta = data.get("respuesta")
+    evaluacion = data.get("evaluacion")  # "buena" o "mala"
+
+    feedback_data = {
+        "especialidad": especialidad,
+        "pregunta": pregunta,
+        "respuesta": respuesta,
+        "evaluacion": evaluacion
+    }
+
+    # Guardar en archivo feedback.jsonl (modo append)
+    try:
+        with open("feedback.jsonl", "a", encoding="utf-8") as f:
+            f.write(json.dumps(feedback_data, ensure_ascii=False) + "\n")
+        return jsonify({"mensaje": "✅ Feedback recibido correctamente."})
+    except Exception as e:
+        logging.error(f"❌ Error al guardar feedback: {str(e)}")
+        return jsonify({"error": "No se pudo guardar el feedback"}), 500
 
 if __name__ == "__main__":
     correccion_cache = cargar_cache()

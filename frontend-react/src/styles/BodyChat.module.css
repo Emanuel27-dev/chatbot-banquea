@@ -18,7 +18,7 @@
 .headerChat {
   background-color: #040B15;
   flex: 1;
-  padding: .5em .8em;
+  padding: .7em .8em;
   display: flex;
   align-items: center;
   gap: 1.5em;
@@ -78,7 +78,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
 }
 
 .messageRow {
@@ -94,7 +94,7 @@
 
 .message {
   /* max-width: 80%; */
-  padding: 0.75rem 1rem;
+  padding: .5rem 1rem;
   border-radius: 1rem;
   font-size: 0.95rem;
 
@@ -102,6 +102,7 @@
 }
 .message.bot {
   /* background-color: #6B7280; */
+  padding: 0 1em;
   color: var(--letra-color);
   align-self: flex-start;
   line-height: 1.8;
@@ -199,6 +200,10 @@
   .messageRow {
     gap: initial;
   }
+
+  .message {
+    padding: .5rem .8rem;
+}
 
 }
 

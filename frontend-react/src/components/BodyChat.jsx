@@ -5,60 +5,25 @@ import { Loader } from "./Loader";
 import logo from "../assets/banqueaIcon.png";
 
 import { ImBook } from "react-icons/im";
+import { AiOutlineMenu } from "react-icons/ai";
+import { Sidebar } from "./Sidebar";
+import { useMessages } from "../hooks/useMessages";
 import {
   AiFillLike,
   AiOutlineLike,
   AiFillDislike,
   AiOutlineDislike,
 } from "react-icons/ai";
-import {
-  AiOutlineDoubleRight,
-  AiOutlineDoubleLeft,
-  AiOutlineMenu,
-} from "react-icons/ai";
-import { Sidebar } from "./Sidebar";
 
 export const BodyChat = () => {
-  const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const { messages, loading, handleSend, handleLike } = useMessages(); // custom hook para traer los mensajes (user,bot) y estado de loading, tambien trae la funcion para manejar los likes
   const [isHidden, setIsHidden] = useState(true);
-
   const bottomRef = useRef(null);
 
   // Scroll automático al final cuando cambian los mensajes
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
-
-  // funcion para administrar los mensajes de usuario y bot
-  const handleSend = async (inputValue) => {
-    const newUserMessage = { sender: "user", text: inputValue };
-    // Mostrando el mensaje del usuario
-    setMessages((prev) => [...prev, newUserMessage]);
-
-    // Mostrar el loader
-    setLoading(true);
-
-    // Llamando a la API http://192.168.18.8:5000
-    const response = await fetch(
-      "https://1mf6c2b1-5000.brs.devtunnels.ms/chat/serums",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": `application/json`,
-        },
-        body: JSON.stringify({ question: inputValue }),
-      }
-    );
-
-    const { respuesta } = await response.json();
-
-    // agregar la respuesta del bot al arreglo messages
-    const newBotMessage = { sender: "bot", text: respuesta };
-    setMessages((prev) => [...prev, newBotMessage]);
-    // console.log(messages);
-    setLoading(false);
-  };
 
   const handleSidebar = () => {
     setIsHidden(!isHidden);
@@ -82,7 +47,7 @@ export const BodyChat = () => {
         <div className={style.chatContainer}>
           <div className={style.chatMessagesContainer}>
             <div className={style.chatMessages}>
-              {/* Si el arreglo esta vacion mostramos el mensaje de bienvenida, caso contrario se inicia la conversacion */}
+              {/* Si el arreglo esta vacio mostramos el mensaje de bienvenida, caso contrario se inicia la conversacion */}
 
               {messages.length === 0 ? (
                 <div className={style.contMessageWelcome}>
@@ -92,36 +57,52 @@ export const BodyChat = () => {
                 </div>
               ) : (
                 <>
-                  {messages.map(({ sender, text }, index) =>
-                    sender === "user" ? (
-                      <div
-                        key={index}
-                        className={`${style.messageRow} ${style.user}`}
-                      >
+                  {messages.map((message) => (
+                    <>
+                      <div className={`${style.messageRow} ${style.user}`}>
                         <div className={`${style.message} ${style.user}`}>
-                          {text}
+                          {message.pregunta}
                         </div>
                       </div>
-                    ) : (
-                      <div className={style.messageRow} key={index}>
-                        <div className={style.avatar}>
-                          <ImBook />
-                        </div>
+                      {message.respuesta && (
+                        <div className={style.messageRow}>
+                          <div className={style.avatar}>
+                            <ImBook />
+                          </div>
 
-                        <div className={`${style.message} ${style.bot}`}>
-                          <p className={style.messageTextBot}>{text}</p>
-                          <div className={style.icons}>
-                            <div>
-                              <AiOutlineLike />
-                            </div>
-                            <div>
-                              <AiOutlineDislike />
+                          <div className={`${style.message} ${style.bot}`}>
+                            <p className={style.messageTextBot}>
+                              {message.respuesta}
+                            </p>
+                            <div className={style.icons}>
+                              <div
+                                onClick={() => handleLike({ ...message }, true)}
+                              >
+                                {message.evaluacion !== null &&
+                                message.evaluacion ? (
+                                  <AiFillLike />
+                                ) : (
+                                  <AiOutlineLike />
+                                )}
+                              </div>
+                              <div
+                                onClick={() =>
+                                  handleLike({ ...message }, false)
+                                }
+                              >
+                                {message.evaluacion !== null &&
+                                message.evaluacion === false ? (
+                                  <AiFillDislike />
+                                ) : (
+                                  <AiOutlineDislike />
+                                )}
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    )
-                  )}
+                      )}
+                    </>
+                  ))}
                   {loading && <Loader />}
                   <div ref={bottomRef} />
                 </>
